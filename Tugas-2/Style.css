@@ -1,0 +1,61 @@
+.container {
+    border: 2px solid lightgray;
+    padding: 10px;
+    margin: 15px;
+}
+
+body {
+    margin: 0;
+    background-image: url("pattern.jpg");
+    
+}
+
+header {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    background-color: #ffffff;
+    margin-top: -75px;
+}
+
+#logo {
+    margin-right: 65%;
+    height: 100%;
+}
+
+td {
+    padding-right: 50px;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+}
+
+ul a {
+    margin-left: 10px;
+}
+
+#main {
+    background-color: #ffffff;
+    margin: 75px 10% 10px 10%;
+    padding: 5px;
+}
+
+.main-item {
+    border-bottom: 2px solid lightgray;
+    margin: 20px;
+}
+
+.main-item a {
+    text-decoration: none;
+}
+
+footer {
+    background-color: #000000;
+    text-align: center;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
