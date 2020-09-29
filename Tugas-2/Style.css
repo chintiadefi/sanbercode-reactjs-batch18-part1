@@ -2,6 +2,7 @@
     border: 2px solid lightgray;
     padding: 10px;
     margin: 15px;
+    background-color:#ffffff ;
 }
 
 body {
@@ -33,7 +34,7 @@ ul {
 }
 
 ul a {
-    margin-left: 10px;
+    margin-left: 15px;
 }
 
 #main {
