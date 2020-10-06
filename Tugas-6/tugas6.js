@@ -17,16 +17,22 @@ console.log(kllLingkaran(7))
 
 let kalimat = ""
 
-const tambahKalimat = (kata) => {
-  const kalimat = {kalimat} + kata
+const tambahKata = (kata) => {
+  kalimat = `${kalimat} ${kata}`
 }
 
-console.log(tambahKalimat("ayam"))
+tambahKata("saya")
+tambahKata("adalah")
+tambahKata("seorang")
+tambahKata("frontend")
+tambahKata("developer")
+
+console.log(kalimat)
 
 
 // soal 3
 
-const newFunction = function literal(firstName, lastName){
+const newFunction = (firstName, lastName) => {
   return {
     fullName: function(){
       console.log(`${firstName} ${lastName}`)
