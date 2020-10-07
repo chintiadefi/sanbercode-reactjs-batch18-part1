@@ -1,19 +1,28 @@
 // soal 1
 
 class Animal {
-    constructor(name, legs = 4, cold_blooded = false) {
-        this.name = name;
-        this.legs = legs;
-        this.cold_blooded = cold_blooded;
+    constructor(name) {
+        this._name = name;
+        this._legs = 4;
+        this._cold_blooded = false;
     }
-    get mamal() {
-        return this.name;
+    get name() {
+        return this._name;
+    }
+    get legs() {
+        return this._legs;
+    }
+    set legs(amount) {
+        this._legs = amount
+    }
+    get cold_blooded() {
+        return this._cold_blooded
     }
 }
     class Ape extends Animal {
-        constructor (name, legs = 2, cold_blooded) {
-            super (name, cold_blooded);
-            this.legs = legs
+        constructor (name, amount) {
+            super (name);
+            this._legs = amount
         }
         yell() {
             return "Auooo"
@@ -21,8 +30,8 @@ class Animal {
     }
 
     class Frog extends Animal {
-        constructor (name, legs, cold_blooded) {
-            super (name, legs, cold_blooded);
+        constructor (name) {
+            super (name);
         }
         jump() {
             return "hop hop"
