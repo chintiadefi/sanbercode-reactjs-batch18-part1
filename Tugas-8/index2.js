@@ -6,13 +6,15 @@ var books = [
     {name: 'Kalkulus', timeSpent: 4000}
 ]
 
-function execute (time, indeks) {
+function execute (time, indeks, booksQueue) {
     readBooksPromise (time, books[indeks]).then(function (waktuTersisa) {
-        if (waktuTersisa > 0) {
-            execute (waktuTersisa, indeks+=1)       
+        time = waktuTersisa;
+        booksQueue = booksQueue - 1;
+        if (booksQueue > 0) {
+            execute (time, indeks+=1, booksQueue)       
         }
     }
     )
 }
 
-execute(90000, 0)
+execute(7000, 0, books.length);

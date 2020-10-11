@@ -8,12 +8,14 @@ var books = [
 ]
 
 
-function execute (time, indeks) {
+function execute (time, indeks, booksQueue) {
     readBooks (time, books[indeks], function(waktuTersisa) {
-        if (waktuTersisa > 0) {
-            execute (waktuTersisa , indeks+=1)
+        time = waktuTersisa;
+        booksQueue = booksQueue - 1;
+        if (booksQueue > 0) {
+            execute (time, indeks+=1, booksQueue)
         }
     })
     }
 
-execute(10000, 0);
+execute(10000, 0, books.length);
